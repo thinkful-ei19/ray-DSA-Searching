@@ -1,22 +1,22 @@
 'use strict';
 function maxProfit(array) {
 //   let sum = 0;
-  let minSum = array[0];
+  let minNum = array[0];
   let index = 0;
 
   for(let i = 0; i < array.length; i++) {
-    if(array[i] < minSum) {
-      minSum = array[i];
+    if(array[i] < minNum) {
+      minNum = array[i];
       index = i;
     }
   }
-  let maxSum = array[index];
+  let maxNum = array[index];
   for(let x = index; x < array.length; x++) {
-    if(maxSum < array[x]) {
-      maxSum = array[x];
+    if(maxNum < array[x]) {
+      maxNum = array[x];
     }
   }
-  return maxSum - minSum;
+  return maxNum - minNum;
 }
 
 
