@@ -122,6 +122,25 @@ class BinarySearchTree {
     }
   }
 
+  dsfInOrder() {
+    if(this.left) {
+      this.left.dsfInOrder();
+    }
+    console.log(this.key);
+    if(this.right) {
+      this.right.dsfInOrder();
+    }
+  }
+
+  dsfPostOrder() {
+    if(this.left) {
+      this.left.dsfPostOrder();
+    }
+    if(this.right) {
+      this.right.dsfPostOrder();
+    }
+    console.log(this.key);
+  }
 }
 
 
@@ -145,6 +164,10 @@ function main() {
   BST.insert(66);
   BST.insert(90);
   BST.insert(22);
+
+//   console.log(BST.dsfPreOrder());
+//   console.log(BST.dsfInOrder());
+  console.log(BST.dsfPostOrder());
 }
 
 main();
