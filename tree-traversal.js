@@ -110,7 +110,21 @@ class BinarySearchTree {
     }
     return this.left._findMin();
   }
+
+  dsfPreOrder() {
+    // Pre-order
+    console.log(this.key);
+    if(this.left) {
+      this.left.dsfPreOrder();
+    }
+    if(this.right) {
+      this.right.dsfPreOrder();
+    }
+  }
+
 }
+
+
 
 
 //================================================================
